@@ -6,6 +6,20 @@ git init
 cd lab2
 mkdir reports
 
+git config includeIf.onbranch:master.path user1
+git config includeIf.onbranch:red1.path user1
+git config includeIf.onbranch:red2.path user1
+git config includeIf.onbranch:blue1.path user2
+git config includeIf.onbranch:blue2.path user2
+git config includeIf.onbranch:blue3.path user2
+git config includeIf.onbranch:blue4.path user2
+git config includeIf.onbranch:blue5.path user2
+
+git config --file=.git/user1 user.name user1
+git config --file=.git/user1 user.email user1@example.com
+git config --file=.git/user2 user.name user2
+git config --file=.git/user2 user.email user2@example.com
+
 #r0
 echo "r0" >> reports/msg0.txt
 git add ./reports/msg0.txt
